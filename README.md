@@ -1,64 +1,98 @@
 # Smash&Clash — Official Installers
 
-Native installers for **Smash&Clash**, the official strategic card-battle game.
-Play it free in your browser at **[smashandclash.in](https://www.smashandclash.in)** —
-or install it as a native app below.
+[![skills.sh](https://skills.sh/b/smashandclash/plugin)](https://skills.sh/smashandclash/plugin)
 
-> This repository contains **only the installers** — no source code. The game is
-> proprietary; see [LICENSE](LICENSE).
+Native installers for **Smash&Clash**, a two-player strategy board game where every move matters. Play it free in your browser at **[smashandclash.in](https://www.smashandclash.in)**, or install it as an app below.
 
-## ⬇️ Download
+> This repository contains **only the installers**, no source code. The game is proprietary; see [LICENSE](LICENSE).
 
-Get the latest installers from the **[Releases page →](https://github.com/smashandclash/installers/releases/latest)**
+## Download
+
+Get the latest installers from the **[Releases page](https://github.com/smashandclash/installers/releases/latest)**.
 
 | Platform | File | Notes |
 |---|---|---|
-| 🪟 **Windows 10/11 (64-bit)** | `Smash-and-Clash-<version>-Windows-Setup.exe` | Per-user installer, no admin needed |
-| 🤖 **Android 7.0+ (API 24+)** | `Smash-and-Clash-<version>-Android.apk` | Sideload; also coming soon on Google Play |
+| **Windows 10/11 (64-bit)** | `Smash-and-Clash-<version>-Windows-Setup.exe` | Per-user installer, no admin needed |
+| **macOS 11+** | `Smash-and-Clash-<version>-macOS-Universal.dmg` | One app for Apple Silicon and Intel |
+| **Linux** | `Smash-and-Clash-<version>-Linux-x86_64.AppImage` | Any distribution; also `.deb` (Debian/Ubuntu) and `.rpm` (Fedora/openSUSE) |
+| **Android 7.0+** | `Smash-and-Clash-<version>-Android.apk` | Sideload, or get it on Google Play |
+| **iPhone / iPad** | (no file) | Add the web app to your Home Screen (see below) |
 
-## 🪟 Installing on Windows
+Each release lists SHA-256 checksums in `SHA256SUMS.txt`.
 
-1. Download `Smash-and-Clash-<version>-Windows-Setup.exe`.
-2. Run it. Because the installer isn't code-signed yet, Windows SmartScreen may
-   show **"Windows protected your PC"** — click **More info → Run anyway**.
-3. It installs for the current user (no admin prompt) and adds a Start-menu
-   shortcut. The WebView2 runtime is installed automatically if missing.
+## Windows
 
-## 🤖 Installing on Android
+1. Download `Smash-and-Clash-<version>-Windows-Setup.exe` and run it.
+2. The installer isn't code-signed yet, so Windows SmartScreen may show **"Windows protected your PC"**. Click **More info → Run anyway**.
+3. It installs for the current user (no admin prompt) and adds a Start-menu shortcut. The WebView2 runtime is installed automatically if it's missing.
 
-1. On your phone, download `Smash-and-Clash-<version>-Android.apk`.
-2. When prompted, allow installing from this source (**Settings → Allow from
-   this source / Install unknown apps**).
-3. Open the downloaded file to install, then launch **Smash&Clash**.
+## macOS
 
-> Prefer the Play Store? A Google Play listing is on the way — pre-registration
-> coming soon.
+1. Download `Smash-and-Clash-<version>-macOS-Universal.dmg`, open it, and drag **Smash&Clash** into **Applications**.
+2. The app isn't notarized by Apple yet. The first time, **right-click (or Control-click) the app → Open**, then confirm **Open**. After that it opens normally.
+   - On recent macOS versions you may instead see "Smash&Clash can't be opened". If so, go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
-## 💻 System requirements
+## Linux
 
-- **Windows:** Windows 10 or 11, 64-bit. (Microsoft Edge WebView2 runtime —
-  bundled/auto-installed.)
-- **Android:** Android 7.0 (Nougat, API 24) or newer.
-- A GPU with WebGL support (virtually all modern devices).
+- **AppImage (any distribution):**
+  ```bash
+  chmod +x Smash-and-Clash-<version>-Linux-x86_64.AppImage
+  ./Smash-and-Clash-<version>-Linux-x86_64.AppImage
+  ```
+- **Debian / Ubuntu:** `sudo apt install ./Smash-and-Clash-<version>-Linux-amd64.deb`
+- **Fedora / RHEL / openSUSE:** `sudo dnf install ./Smash-and-Clash-<version>-Linux-x86_64.rpm`
 
-## 🔒 Verify your download (optional)
+The app uses the system WebKitGTK (webkit2gtk 4.1), which the `.deb` and `.rpm` pull in automatically.
 
-Each release lists SHA-256 checksums. To verify:
+## Android
 
+- **Google Play:** search for Smash&Clash (rolling out).
+- **Sideload:**
+  1. On your phone, download `Smash-and-Clash-<version>-Android.apk`.
+  2. When prompted, allow installing from this source (**Settings → Install unknown apps**).
+  3. Open the downloaded file to install it, then launch **Smash&Clash**.
+
+## iPhone and iPad
+
+Open **[smashandclash.in](https://www.smashandclash.in)** in **Safari**, tap **Share**, then **Add to Home Screen**. It installs as a full-screen app with its own icon, and it plays offline once the offline pack has downloaded. An App Store version will follow.
+
+## Verify your download (optional)
+
+```bash
+# macOS / Linux
+shasum -a 256 Smash-and-Clash-<version>-*        # compare with SHA256SUMS.txt
+sha256sum -c SHA256SUMS.txt --ignore-missing      # Linux
+```
 ```powershell
 # Windows (PowerShell)
-Get-FileHash .\Smash-and-Clash-1.0.0-Windows-Setup.exe -Algorithm SHA256
+Get-FileHash .\Smash-and-Clash-<version>-Windows-Setup.exe -Algorithm SHA256
 ```
+
+## System requirements
+
+- **Windows:** Windows 10 or 11, 64-bit. The Microsoft Edge WebView2 runtime is bundled or auto-installed.
+- **macOS:** macOS 11 Big Sur or newer, Apple Silicon or Intel.
+- **Linux:** x86_64 with WebKitGTK 4.1 (Ubuntu 22.04+, Debian 12+, Fedora 38+ or equivalent).
+- **Android:** Android 7.0 (API 24) or newer.
+- **iPhone / iPad:** iOS / iPadOS 16.4 or newer in Safari.
+- A GPU with WebGL support (virtually all modern devices).
+
+## For AI agents
+
+Agents can play Smash&Clash too: over MCP at `https://www.smashandclash.in/api/mcp`, with [`npx smashandclash`](https://www.npmjs.com/package/smashandclash), or with the skills:
+
 ```bash
-# Android APK (any machine)
-sha256sum Smash-and-Clash-1.0.0-Android.apk
+npx skills add smashandclash/plugin
 ```
 
-## ℹ️ About
+## About
 
-Smash&Clash is the **official** edition of the game — 51 unique character cards,
-a 3×5 board, smash-style captures, an adaptive AI opponent, local hot-seat PvP,
-a tutorial, and a mutators mode, with 3D presentation and character voices.
+Smash&Clash is the **official** edition of the game: 51 unique character cards on a 3×5 board, with smash-style captures. It has:
+
+- an adaptive AI opponent;
+- online play and local hot-seat PvP;
+- a tutorial and Mutators mode;
+- 3D presentation and character voices.
 
 Official site: <https://www.smashandclash.in>
 
