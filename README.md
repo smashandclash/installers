@@ -8,7 +8,9 @@ Native installers for **Smash&Clash**, a two-player strategy board game where ev
 
 ## Download
 
-Get the latest installers from the **[Releases page](https://github.com/smashandclash/installers/releases/latest)**.
+The latest release is **2.1.0**: [Windows](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Windows-Setup.exe) · [macOS](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-macOS-Universal.dmg) · [Linux AppImage](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-x86_64.AppImage) · [.deb](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-amd64.deb) · [.rpm](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-x86_64.rpm) · [Android APK](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Android.apk) · [SHA256SUMS.txt](https://github.com/smashandclash/installers/releases/download/v2.1.0/SHA256SUMS.txt)
+
+Every release is on the **[Releases page](https://github.com/smashandclash/installers/releases/latest)**.
 
 | Platform | File | Notes |
 |---|---|---|
@@ -19,6 +21,16 @@ Get the latest installers from the **[Releases page](https://github.com/smashand
 | **iPhone / iPad** | (no file) | Add the web app to your Home Screen (see below) |
 
 Each release lists SHA-256 checksums in `SHA256SUMS.txt`.
+
+## What's new in 2.1.0
+
+**Every client plays every other.** Smash&Clash is one game network, and these apps are part of it:
+
+- **Play a friend** makes a room with a six-letter code. Your friend joins with that code from anywhere: these apps, [smashandclash.in](https://www.smashandclash.in), Telegram, a terminal (`npx smashandclash open CODE`) or any app built on the [SDK](https://docs.smashandclash.in/sdk). Codes from all of those work here too.
+- **Quick match** pairs you with players on every client, not only other app players.
+- Games connect on any network, including mobile data, and stay fair: the game network checks every move.
+
+More in the docs: [one game, every client](https://docs.smashandclash.in/clients).
 
 ## Windows
 
@@ -90,7 +102,7 @@ npx skills add smashandclash/plugin
 Smash&Clash is the **official** edition of the game: 51 unique character cards on a 3×5 board, with smash-style captures. It has:
 
 - an adaptive AI opponent;
-- online play and local hot-seat PvP;
+- online play with players on every client (rooms by code, quick match) and local hot-seat PvP;
 - a tutorial and Mutators mode;
 - 3D presentation and character voices.
 
