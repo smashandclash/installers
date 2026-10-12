@@ -8,13 +8,15 @@ Native installers for **Smash&Clash**, a two-player strategy board game where ev
 
 ## Download
 
+> **On Windows, install from the [Microsoft Store](https://apps.microsoft.com/detail/9P9B8WL9KHSZ) instead of the `.exe`.** It's the recommended way: no SmartScreen warning, and the Store keeps the app up to date.
+
 The latest release is **2.1.0**: [Windows](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Windows-Setup.exe) · [macOS](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-macOS-Universal.dmg) · [Linux AppImage](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-x86_64.AppImage) · [.deb](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-amd64.deb) · [.rpm](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Linux-x86_64.rpm) · [Android APK](https://github.com/smashandclash/installers/releases/download/v2.1.0/Smash-and-Clash-2.1.0-Android.apk) · [SHA256SUMS.txt](https://github.com/smashandclash/installers/releases/download/v2.1.0/SHA256SUMS.txt)
 
 Every release is on the **[Releases page](https://github.com/smashandclash/installers/releases/latest)**.
 
 | Platform | File | Notes |
 |---|---|---|
-| **Windows 10/11 (64-bit)** | `Smash-and-Clash-<version>-Windows-Setup.exe` | Per-user installer, no admin needed |
+| **Windows 10/11 (64-bit)** | **[Microsoft Store](https://apps.microsoft.com/detail/9P9B8WL9KHSZ)** (recommended) · or `Smash-and-Clash-<version>-Windows-Setup.exe` | The Store version updates itself; the `.exe` is a per-user installer, no admin needed |
 | **macOS 11+** | `Smash-and-Clash-<version>-macOS-Universal.dmg` | One app for Apple Silicon and Intel |
 | **Linux** | `Smash-and-Clash-<version>-Linux-x86_64.AppImage` | Any distribution; also `.deb` (Debian/Ubuntu) and `.rpm` (Fedora/openSUSE) |
 | **Android 7.0+** | `Smash-and-Clash-<version>-Android.apk` | Sideload, or get it on Google Play |
@@ -33,6 +35,10 @@ Each release lists SHA-256 checksums in `SHA256SUMS.txt`.
 More in the docs: [one game, every client](https://docs.smashandclash.in/clients).
 
 ## Windows
+
+**Recommended: [get Smash&Clash from the Microsoft Store](https://apps.microsoft.com/detail/9P9B8WL9KHSZ).** Open the link, press **Get**, and Windows installs it, checks it and keeps it up to date. No SmartScreen warning.
+
+Prefer a direct download (offline machines, or no Store)? Use the `.exe`:
 
 1. Download `Smash-and-Clash-<version>-Windows-Setup.exe` and run it.
 2. The installer isn't code-signed yet, so Windows SmartScreen may show **"Windows protected your PC"**. Click **More info → Run anyway**.
